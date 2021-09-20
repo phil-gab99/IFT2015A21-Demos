@@ -1,8 +1,10 @@
+package demo1;
+
 import java.util.Collection;
 
 public class MyQueue<T> {
     private static final int INIT_CAPACITY = 8;
-    
+    private int capacity;
     private Object[] queue;
     private int start;
     private int n;
@@ -12,6 +14,7 @@ public class MyQueue<T> {
     }
     
     public MyQueue(int capacity) {
+        this.capacity = capacity;
         start = n = 0;
         queue = new Object[capacity];
     }
@@ -43,6 +46,28 @@ public class MyQueue<T> {
     
     public boolean isEmpty() {
         return n == 0;
+    }
+    
+    @Override
+    public String toString() {
+        if (isEmpty()) return "[]";
+        
+        StringBuilder sb = new StringBuilder("[");
+        int end = (start + n - 1) % queue.length;
+        T e = null;
+        int count = 0;
+        
+        for (int i = start; i < queue.length && (e = queue(i)) != null;
+            i++, count ++)
+            sb.append(e + ", ");
+            
+        if (e == null || count == capacity)
+            return sb.substring(0, sb.length() -2) + "]";
+        
+        for (int i = 0; i < end; i++) {
+            sb.append(queue(i) + ", ");
+        }
+        return sb.toString() + queue(end) + "]";
     }
     
     @SuppressWarnings("unchecked")

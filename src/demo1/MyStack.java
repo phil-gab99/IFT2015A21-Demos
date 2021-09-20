@@ -1,3 +1,5 @@
+package demo1;
+
 import java.util.Collection;
 import java.util.Iterator;
 
@@ -116,32 +118,5 @@ public class MyStack<T> implements Iterator<T> {
         private StackUnderflowException() {
             super("Stack empty");
         }
-    }
-    
-    public static void main(String[] args) {
-        // MyStack<Integer> s = new MyStack<Integer>();
-        // s.push(1);
-        // s.push(2);
-        // s.push(3);
-        // MyStack<Integer> t = new MyStack<Integer>();
-        // t.push(4);
-        // t.push(5);
-        // t.push(6);
-        // 
-        // System.out.println(s);
-        // System.out.println(t);
-        // s.transfer(s, t);
-        // System.out.println(s);
-        // System.out.println(t);
-        
-        MyStack<Integer> test = new MyStack<Integer>();
-        test.push(1);
-        test.push(2);
-        test.push(3);
-        test.push(4);
-        test.push(5);
-        System.out.println(test);
-        test.rotate();
-        System.out.println(test);
     }
 }
