@@ -2,6 +2,12 @@ package demo1;
 
 import java.util.Collection;
 
+/**
+ * Queue using an array implementation with some custom methods.
+ *
+ * @param T Generic type of queue
+ * @author Philippe Gabriel
+ */
 public class MyQueue<T> {
     private static final int INIT_CAPACITY = 8;
     private int capacity;

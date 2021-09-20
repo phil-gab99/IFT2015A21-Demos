@@ -3,6 +3,12 @@ package demo1;
 import java.util.Collection;
 import java.util.Iterator;
 
+/**
+ * Stack using an array implementation with some custom methods.
+ *
+ * @param T Generic type of stack
+ * @author Philippe Gabriel
+ */
 public class MyStack<T> implements Iterator<T> {
     private static final int INIT_CAPACITY = 8;
     private static final int ALPHA = 2;
