@@ -113,7 +113,6 @@ public class MyStack<T> implements Iterator<T> {
         return (T)stack[i];
     }
     
-    
     static class StackUnderflowException extends RuntimeException {
         private StackUnderflowException() {
             super("Stack empty");
