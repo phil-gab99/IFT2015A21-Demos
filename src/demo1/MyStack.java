@@ -11,7 +11,7 @@ import java.util.Iterator;
  */
 public class MyStack<T> implements Iterator<T> {
     private static final int INIT_CAPACITY = 8;
-    private static final int ALPHA = 2;
+    private static final int ALPHA = 2; // Approche géoétrique
     
     private Object[] stack;
     private int n;
@@ -71,7 +71,8 @@ public class MyStack<T> implements Iterator<T> {
     
     public void rotate() {
         MyStack<T> copy = new MyStack<T>(n);
-        for (int i = 0; i < n; i++) copy.stack[i + 1] = stack(i);
+        // Correction de borne supérieur suggéré par collègue
+        for (int i = 0; i < n - 1; i++) copy.stack[i + 1] = stack(i);
         copy.stack[0] = stack(n - 1); // Complete rotation
         this.stack = copy.stack;
     }
