@@ -9,7 +9,7 @@ import java.util.Iterator;
  * @param T Generic type of stack
  * @author Philippe Gabriel
  */
-public class MyStack<T> implements Iterator<T> {
+public class MyStack<T> implements Iterator<T>, Stack<T> {
     private static final int INIT_CAPACITY = 8;
     private static final int ALPHA = 2; // Approche géoétrique
     

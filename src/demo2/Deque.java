@@ -12,7 +12,7 @@ public interface Deque<T> {
      *
      * @return Number of elements in deque
      */
-    int size();
+    int size(); // -> size() Stack
     
     /**
      * Checks whether the current deque structure is empty or not.
@@ -20,14 +20,14 @@ public interface Deque<T> {
      * @return <ul><li>{@code true} if the deque is empty,</li><li>{@code false}
      * otherwise</li></ul>
      */
-    boolean isEmpty();
+    boolean isEmpty(); // 
     
     /**
      * Peeks at the first element of the deque without removing it. 
      *
      * @return First element of deque
      */
-    T first();
+    T first(); // top()
     
     /**
      * Peeks at the last element of the deque without removing it. 
@@ -42,7 +42,7 @@ public interface Deque<T> {
      * @param e Element of generic type to be added
      * @return 
      */
-    void addFirst(T e);
+    void addFirst(T e); // -> push(e)
     
     /**
      * Inserts element at the end of the deque.

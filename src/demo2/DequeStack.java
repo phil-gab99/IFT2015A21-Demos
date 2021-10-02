@@ -1,9 +1,9 @@
 package demo2;
 
-public class DequeStack<T> implements Stack<T> {
-    private DoublyLinkedDeque<T> list;
+public class MyDeque<T> implements Stack<T> {
+    private Deque<T> list;
     
-    public DequeStack() {
+    public MyDeque() {
         list = new DoublyLinkedDeque<T>();
     }
     
